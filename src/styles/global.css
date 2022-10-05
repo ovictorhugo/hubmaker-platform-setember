@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-white text-gray-100;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+    -webkit-scrollbar {
+        background-color: transparent;
+        height: 10px;
+        transition: background-color .2s linear;
+        width: 10px;
+    }
+
+    ::-webk::it-scrollbar-thumb {
+        background: #aaa;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+        border-radius: 1px;
+        transition: background-color .2s linear;
+    }
+}
+
+.slick-next:before {
+    color: #000;
+}
+
+.slick-prev:before {
+    color: #000;
+}
+
+@font-face {
+    font-family: 'ClanPro-News';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ClanPro-News'), url('ufonts.com_clanpro-news.woff') format('woff');
+}
