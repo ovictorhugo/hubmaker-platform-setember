@@ -4,9 +4,35 @@ import { Background } from "../components/Background";
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 import { Homepage } from "../components/Homepage";
+import React, { useEffect, useState } from "react";
 
 export function EnvieSeuProjeto() {
 
+    let item = {
+        name: 'gabriel',
+        objective: 'A',
+        description: 'B',
+        inspiration: 'C',
+        nameOfCreator: 'D',
+        email: 'gabriel@quickup.io'
+
+        };
+    function send() {
+        // Simple POST request with a JSON body using fetch
+        console.log(item);
+        
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(item)
+        };
+        fetch('http://localhost:8080/project', requestOptions)
+            .then(response => response.json()).catch(err => {
+                console.log("ERRO");
+                
+            })
+    }
+    
     return  (
         <div>
             <Header/>
@@ -39,63 +65,59 @@ export function EnvieSeuProjeto() {
 
                 <h1 className="max-w-[600px] my-8 text-6xl font-bold text-gray-500">Descrição do projeto</h1>
 
-                <form action="">
+                <form action="" onSubmit={send} method="POST">
                     <Input
                     label="Nome do projeto"
                     type="text"
+                    value={item.name}
                     ></Input>
 
                     <Input
                     label="Descrição"
                     type="text"
+                    value={item.description}
                     ></Input>
 
                     <Input
                     label="Inspiração (se possuir)"
                     type="text"
+                    value={item.inspiration}
                     ></Input>
 
                     <Input
                     label="Objetivo do projeto"
                     type="text"
+                    value={item.objective}
                     ></Input>
 
+                    <Input
+                    label="Nome Completo"
+                    type="text"
+                    value={item.nameOfCreator}
+                    ></Input>
+
+                    <Input
+                    label="Email"
+                    type="email"
+                    value={item.email}
+                    ></Input>
+
+{/*                     
                     <p className=" w-auto text-left mb-8 text-lg text-gray-400 font-semibold">Por esta ser a expressão da minha vontade declaro que estou ciente dos termos acima descritos sem que nada haja a ser reclamado a título de direitos conexos à minha imagem ou a qualquer outro.</p>
 
                     <div className="flex justify-between">
                         <div className="w-[49%]">
-                            <Input
-                            label="Nome Completo"
-                            type="text"
-                            ></Input>
-                        </div>
 
-                        <div className="w-[49%]">
-                            <Input
-                            label="CPF"
-                            type="number"
-                            ></Input>
                         </div>
                     </div>
 
                     <div className="flex justify-between">
                         <div className="w-[49%]">
-                            <Input
-                            label="Email"
-                            type="email"
-                            ></Input>
                         </div>
-
-                        <div className="w-[49%]">
-                            <Input
-                            label="Data"
-                            type="date"
-                            ></Input>
-                        </div>
-                    </div>
+                    </div> */}
 
 
-                    <button type="submit" className="p-3 mt-4  w-full text-xs bg-green-400 text-white flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-darkGreen-400 transition-colors">
+                    <button type="button" onClick={send} className="p-3 mt-4  w-full text-xs bg-green-400 text-white flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-darkGreen-400 transition-colors">
                     <Check size={16}/>
                     Submeter
                     </button>
