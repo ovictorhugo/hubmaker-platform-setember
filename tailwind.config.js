@@ -26,13 +26,16 @@ module.exports = {
         }
        },
        animation: {
-        bgSlideOne: 'bgSlideOne 100s linear infinite',
-        bgSlideTwo: 'bgSlideTwo 100s linear infinite',
+        bgSlideOne: 'bgSlideOne 200s linear infinite',
+        bgSlideTwo: 'bgSlideTwo 200s linear infinite',
         bgVertical: 'bgVertical 100s linear infinite',
        },
       backgroundSize: {
         'bg': 'auto 80%',
         'bgv': ' 100% auto',
+        'bgbahia': ' auto 100%',
+        'bgvlg': ' 100%',
+        'bgItens': ' 70% auto',
         'bgfotos': ' 80% auto',
       },
       backgroundImage: {
@@ -42,16 +45,13 @@ module.exports = {
         bgHub4: 'url(/src/assets/hubmaker4.png)',
         bgParceiros: 'url(/src/assets/logos_parceiros.png)',
 
-        bgBrown: 'url(/src/assets/bg-brown-400.png)',
-        bgCyan: 'url(/src/assets/bg-cyan-400.png)',
-        bgDarkGreen: 'url(/src/assets/bg-darkGreen-400.png)',
-        bgGray: 'url(/src/assets/bg-gray-400.png)',
-        bgOrange: 'url(/src/assets/bg-orange-400.png)',
-        bgPurple: 'url(/src/assets/bg-purple-400.png)',
+        bgOne: 'url(/src/assets/one.png)',
 
         bgVertical: 'url(/src/assets/bg-vertical.png)',
-        bgMaker: 'url(/src/assets/maker_background.png)',
+        bgMaker: 'url(/src/assets/background_maker.png)',
         bgMakerHome: 'url(/src/assets/maker_home.png)',
+        bgBahia: 'url(/src/assets/bahia.png)',
+        bgBahiaMapa: 'url(/src/assets/bahia-mapa.png)',
         bgFotosForms: 'url(/src/assets/fotos_forms.png)',
         bgOds: 'url(/src/assets/ods.png)',
         bgLetreiro: 'url(/src/assets/letreiro.png)',
@@ -69,10 +69,10 @@ module.exports = {
 
       colors: {
         green: {
-          100: '#DDE8AD',
+          100: '#D9FFE1',
           200: '#D4E295',
           300: '#C2D665',
-          400: '#A5C500',
+          400: '#16A338',
         },
         darkGreen: {
           100: '#BDBDA0',
@@ -115,8 +115,8 @@ module.exports = {
           400: '#4B1702',
         },
         gray: {
-          100: '#D6DCE0',
-          200: '#B9C1C7',
+          100: '#EFF5F9',
+          200: '#DFECF4',
           300: '#AAB3BA',
           400: '#717A83',
           500: '#323238',
